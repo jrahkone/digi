@@ -1,6 +1,7 @@
 variable "rg" {}
 variable "loc" {default="westeurope"}
 variable "admin_username" {default="azureuser"}
+variable "admin_password" {default="foo"} # this is used only if key fails
 
 provider "azurerm" {
   features {}

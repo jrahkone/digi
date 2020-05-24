@@ -23,7 +23,7 @@ terraform demo for digitalents azure course
 12. terraform apply plan
 
 ## test ssh and deploy demo app
-13. ip=$(terraform output ip1)
+13. ip=$(terraform output ip0)
 14. ssh azureuser@$ip
 15. exit
 16. scp -r Books/ azureuser@$ip:./

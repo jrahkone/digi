@@ -33,6 +33,9 @@ resource "azurerm_linux_virtual_machine" "vm1" {
 	connection {
 	  host     = azurerm_public_ip.ip[0].ip_address
 	  user     = var.admin_username
+	  private_key = file("~/.ssh/id_rsa")
+	  #type = "ssh"
+	  #password = var.admin_password
 	}	
 	source      = "install-vm-stuff.sh"
 	destination = "install.sh"
@@ -42,6 +45,9 @@ resource "azurerm_linux_virtual_machine" "vm1" {
 	connection {
 	  host     = azurerm_public_ip.ip[0].ip_address
 	  user     = var.admin_username
+	  private_key = file("~/.ssh/id_rsa")
+	  #type = "ssh"
+	  #password = var.admin_password
 	}
 	inline = [
 	  "chmod u+x install.sh",
