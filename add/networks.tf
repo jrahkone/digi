@@ -49,11 +49,12 @@ resource "azurerm_network_security_group" "nsg" {
 
 # Create network interface nic
 resource "azurerm_network_interface" "nic" {
-  name                      = "nic"
+  count = 1
+  name                      = "nic${count.index}"
   location                  = var.loc
   resource_group_name       = var.rg
   ip_configuration {
-    name                          = "nic_conf"
+    name                          = "nic${count.index}_conf"
     subnet_id                     = azurerm_subnet.subnet.id
     private_ip_address_allocation = "Dynamic"
 	public_ip_address_id          = azurerm_public_ip.ip[0].id

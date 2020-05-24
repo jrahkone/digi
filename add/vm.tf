@@ -6,7 +6,7 @@ resource "azurerm_linux_virtual_machine" "vm1" {
   location              = var.loc
   size                  = "Standard_F2s_v2"
   admin_username        = var.admin_username
-  network_interface_ids = [azurerm_network_interface.nic.id]
+  network_interface_ids = [azurerm_network_interface.nic[0].id]
   
   admin_ssh_key {
 	username = var.admin_username
