@@ -9,7 +9,7 @@
   "main": "server.js",
   "dependencies": {
     "express": "~4.16",
-    "mongoose": "~5.3",
+    "mongoose": "=5.9.15",
     "body-parser": "~1.18"
   }
 }

@@ -32,13 +32,12 @@ terraform demo for digitalents azure course
 17. ssh azureuser@$ip
 18. cd Books
 19. npm install
-20. npm install mongoose@5.9.15
-21. sudo node server.js
+20. sudo node server.js
 
 ## navigate browser to ip address and insert demo books.
 
 ## test some changes to app. redeploy app.
 
 ## clean up.
-22. terraform destroy
+21. terraform destroy
 
