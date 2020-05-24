@@ -2,4 +2,4 @@
 plan
 terraform.tfstate
 terraform.tfstate.backup
-main.tf
+/main.tf
