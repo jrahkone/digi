@@ -31,7 +31,7 @@ resource "azurerm_linux_virtual_machine" "vm1" {
 
   provisioner "file" {
 	connection {
-	  host     = azurerm_public_ip.ip[0].ip_address
+	  host     = self.public_ip_address
 	  user     = var.admin_username
 	  private_key = file("~/.ssh/id_rsa")
 	  #type = "ssh"
@@ -43,7 +43,7 @@ resource "azurerm_linux_virtual_machine" "vm1" {
   
   provisioner "remote-exec" {
 	connection {
-	  host     = azurerm_public_ip.ip[0].ip_address
+	  host     = self.public_ip_address
 	  user     = var.admin_username
 	  private_key = file("~/.ssh/id_rsa")
 	  #type = "ssh"
