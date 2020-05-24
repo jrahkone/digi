@@ -41,3 +41,6 @@ terraform demo for digitalents azure course
 ## clean up.
 21. terraform destroy
 
+
+## Terraform azurerm 2.0.0
+https://github.com/terraform-providers/terraform-provider-azurerm/blob/v2.0.0/examples/virtual-machines/linux/provisioner/main.tf
